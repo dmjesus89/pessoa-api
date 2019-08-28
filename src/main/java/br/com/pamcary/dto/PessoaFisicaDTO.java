@@ -1,16 +1,21 @@
 package br.com.pamcary.dto;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+import javax.validation.constraints.NotNull;
 
 public class PessoaFisicaDTO {
 
+	@NotNull
 	private Long codigo;
 
+	@NotNull
 	private String nome;
 
+	@NotNull
 	private String cpf;
 
-	private LocalDate dataNascimento;
+	private LocalDateTime dataNascimento;
 
 	public Long getCodigo() {
 		return codigo;
@@ -36,11 +41,11 @@ public class PessoaFisicaDTO {
 		this.cpf = cpf;
 	}
 
-	public LocalDate getDataNascimento() {
+	public LocalDateTime getDataNascimento() {
 		return dataNascimento;
 	}
 
-	public void setDataNascimento(LocalDate dataNascimento) {
+	public void setDataNascimento(LocalDateTime dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 

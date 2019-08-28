@@ -1,21 +1,23 @@
 package br.com.pamcary.entity;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "PESSO_FISICA")
+@Table(name = "PESSOA_FISICA")
 public class PessoaFisicaEntity {
 
 	@Id
 	@Column(name = "CODIGO")
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence_pessoa_fisica")
+	@SequenceGenerator(name = "sequence_pessoa_fisica", sequenceName = "sequence_pessoa_fisica")
 	private Long codigo;
 
 	@Column(name = "NOME")
@@ -25,7 +27,7 @@ public class PessoaFisicaEntity {
 	private String cpf;
 
 	@Column(name = "DATA_NASCIMENTO")
-	private LocalDate dataNascimento;
+	private LocalDateTime dataNascimento;
 
 	public Long getCodigo() {
 		return codigo;
@@ -51,11 +53,11 @@ public class PessoaFisicaEntity {
 		this.cpf = cpf;
 	}
 
-	public LocalDate getDataNascimento() {
+	public LocalDateTime getDataNascimento() {
 		return dataNascimento;
 	}
 
-	public void setDataNascimento(LocalDate dataNascimento) {
+	public void setDataNascimento(LocalDateTime dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 

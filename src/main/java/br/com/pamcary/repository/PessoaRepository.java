@@ -10,6 +10,6 @@ import br.com.pamcary.entity.PessoaFisicaEntity;
 @Repository
 public interface PessoaRepository extends JpaRepository<PessoaFisicaEntity, Long> {
 
-	Optional<PessoaFisicaEntity> findByNome(String nome);
+	Optional<PessoaFisicaEntity> findByCpf(String cpf);
 
 }

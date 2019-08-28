@@ -19,12 +19,12 @@ spring:
           use_jdbc_metadata_defaults: false
   jackson:
     date-format: yyyy-MM-dd
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+    time-zone: UTC
   servlet:
     multipart:
       max-file-size: 5MB
       max-request-size: 5MB
   flyway:
     enabled: true
-    ## Jackson Properties
-#spring.jackson.serialization.WRITE_DATES_AS_TIMESTAMPS= false
-#spring.jackson.time-zone= UTC

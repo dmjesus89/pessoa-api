@@ -4,13 +4,18 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ResponseStatus(HttpStatus.BAD_REQUEST)
-public class NameAlreadyUsedException extends RuntimeException {
+public class CpfEmUsoException extends RuntimeException {
 
-	public NameAlreadyUsedException(String message) {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public CpfEmUsoException(String message) {
 		super(message);
 	}
 
-	public NameAlreadyUsedException(String message, Throwable cause) {
+	public CpfEmUsoException(String message, Throwable cause) {
 		super(message, cause);
 	}
 
