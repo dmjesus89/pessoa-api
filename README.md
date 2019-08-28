@@ -24,4 +24,12 @@ Também pode ser criado um banco de teste ou banco em mémoria.
 
 
 
-### Exemplos de Request: ### 
+### Exemplos de Request: ### .
+POST: http://localhost:8080/api/pessoas/
+
+GET: http://localhost:8080/api/pessoas/1
+
+PUT: http://localhost:8080/api/pessoas/
+
+DELETE: http://localhost:8080/api/pessoas/1
+
