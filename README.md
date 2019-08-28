@@ -19,3 +19,26 @@
 
 ### Prazo de entrega
 Após recebimento do e-mail o candidato terá 48hrs para entregar o projeto.
+
+
+Rodar a aplicação em DEV: 
+Executar a classe AvaliacaoApplication.java, como classe Java.
+
+Rodar a aplicação em HOMO ou PROD: 
+Para realizar deploy em outros ambientes deve ser criar outros arquivos de configuração na pasta resource, application-homo ou prod e configurar todas as informações necessário ( DataSource, Porta e etc)
+
+Servidores:
+A aplicação roda no ambiente de dev com o container tomcat já embutido, porém é possível subir em um servidor web 
+Para gerar um pacote deve ser executado o maven com o comando ( mvn clean instal) ou pelo eclipse maven build (clean install)
+
+Banco Utilizado: H2 em memória.
+
+
+SWAGGER
+
+http://localhost:8080/swagger-ui.html 
+
+Realizado com as bibliotecas do io.springfox
+	
+Os testes da camada service foram mockados e usei a configuração do spring para levantar o container do spring.
+Também pode ser criado um banco de teste, ou banco em mémoria.
