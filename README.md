@@ -25,11 +25,33 @@ Também pode ser criado um banco de teste ou banco em mémoria.
 
 
 ### Exemplos de Request: ### .
-POST: http://localhost:8080/api/pessoas/
+POST: 
+http://localhost:8080/api/pessoas/
 
-GET: http://localhost:8080/api/pessoas/1
+### Payload: ###
+{
+  "cpf": "04124842528",
+  "dataNascimento": "2016-01-01T10:24",
+  "nome": "Carlos Eduardo"
+}
 
-PUT: http://localhost:8080/api/pessoas/
 
-DELETE: http://localhost:8080/api/pessoas/1
+GET: 
+http://localhost:8080/api/pessoas/1
+
+PUT: 
+http://localhost:8080/api/pessoas/
+
+### Payload: ###
+{
+  "codigo": 1,
+  "cpf": "09834535319",
+  "dataNascimento": "2016-01-01T10:24",
+  "nome": "Jose luiz"
+}
+
+DELETE: 
+http://localhost:8080/api/pessoas/1
+
+
 
