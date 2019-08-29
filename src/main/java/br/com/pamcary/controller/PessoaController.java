@@ -39,7 +39,7 @@ import io.swagger.annotations.ApiResponses;
 @Api(value = "pessoas", description = "Tudo sobre pessoas", produces = "application/json")
 @RestController
 @RequestMapping("/api/pessoas")
-@CrossOrigin
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class PessoaController {
 
 	@Autowired

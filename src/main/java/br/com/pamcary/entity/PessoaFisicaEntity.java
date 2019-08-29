@@ -15,9 +15,9 @@ import javax.persistence.Table;
 public class PessoaFisicaEntity {
 
 	@Id
-	@Column(name = "CODIGO")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence_pessoa_fisica")
-	@SequenceGenerator(name = "sequence_pessoa_fisica", sequenceName = "sequence_pessoa_fisica")
+	@SequenceGenerator(name="sequence_pessoa_fisica", sequenceName = "sequence_pessoa_fisica", allocationSize = 1)
+	@Column(name = "CODIGO")
 	private Long codigo;
 
 	@Column(name = "NOME")

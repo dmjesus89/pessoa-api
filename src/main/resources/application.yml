@@ -22,6 +22,8 @@ spring:
     serialization:
       WRITE_DATES_AS_TIMESTAMPS: false
     time-zone: UTC
+    deserialization:
+      fail-on-unknown-properties: true
   servlet:
     multipart:
       max-file-size: 5MB
